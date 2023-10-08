@@ -2,8 +2,8 @@ import React from "react";
 
 function Tours() {
   return (
-    <div className="h-100%">
-      <div className="w-full text-center font-bold text-[100px]">Tours</div>
+    <div className=" px-[100px]">
+      <div className="w-full text-center text-[50px] font-Pbold">Tours</div>
       <div className="flex items-center justify-center w-full">
         <TourSite />
       </div>
@@ -19,14 +19,14 @@ const planets = [
     imageSrc:
       "https://starwalk.space/gallery/images/mars-the-ultimate-guide/1140x641.jpg",
     imageAlt: "Mars a red planets",
-    description:"Mars is the second smallest planet in the Solar System – only Mercury is smaller."
+    description:"Mars is the second smallest planet in the Solar System - only Mercury is smaller."
   },
   {
     id:2,
     name:"Jupiter",
     imageSrc:"https://api.time.com/wp-content/uploads/2022/09/jupiter-china-spacecraft.jpg?quality=85&w=800",
     imageAlt:"Jupiter 101",
-    description:"Jupiter is, by far, the largest planet in the solar system – more than twice as massive as all the other planets combined."
+    description:"Jupiter is, by far, the largest planet in the solar system - more than twice as massive as all the other planets combined."
   },
   {
     id:3,
@@ -39,11 +39,11 @@ const planets = [
 
 function TourSite() {
   return (
-    <div className="bg-white ">
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <div className="bg-white">
+      <div className="mx-auto max-w-2xl px-4 sm:px-6 sm:py-5 lg:max-w-7xl lg:px-8">
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {planets.map((planet) => (
-            <div key={planet.id} className="group relative shadow-xl p-4">
+            <div key={planet.id} className="group relative shadow-xl p-10 hover-2 ">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80">
                 <img
                   src={planet.imageSrc}
@@ -54,10 +54,11 @@ function TourSite() {
               <div className="mt-4 flex justify-between">
                 <div className="text-center w-full">
                   <h3 className="text-lg font-semibold text-gray-700 ">
-                    <a href={planet.href}>
-                      <span aria-hidden="true" className="absolute inset-0" />
+                    <a href={planet.href} className="flex flex-col gap-3">
+                      <span className="font-Psemi text-[30px] text-black">
                       {planet.name}
-                      <p>{planet.description}</p>
+                      </span>
+                      <p className="font-Nlight text-[15px]">{planet.description}</p>
                     </a>
                   </h3>
                 </div>
